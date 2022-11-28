@@ -1,0 +1,55 @@
+ELEGIR UN TEMA A GUSTO (ANIME , FUTBOL, CINE , SERIES, MODA, ETC)Y A PARTIR DEL MISMO RELAIZAR LAS SIGUIENTES ACTIVIDADES:
+
+1 - GIT
+	* Crear un repositorio en github en la que pueda ver los avances (commits inicial y los sucesivos push con sus comentarios). Tomar uno de los proyectos siguientes para aplicar control de versión.
+	*deberán trabajar en una rama secundaría y unicamente utilizar la rama master para cambios definitivos (la rama master siempre debe ser una versión funcional)
+
+
+2-  BASE DE DATOS:
+	*CREAR UNA BASE DE DATOS SQLITE (DB3) 
+	*la misma debe poseer al menos tres tablas relacionadas entre si por foreingkey
+	*una de las tablas debe ser una persona con al menos los siguientes campos :
+		-fecha nacimiento
+		-nombre
+		-apellido
+		-DNI
+		-sueldo mensual
+		-
+		-
+		-
+
+
+			
+3- APLICACIÓN:
+	* Diseñar una aplicación la cual deberá :
+		-conectarse a la base de datos creada
+		-insertar registros a por lo menos una tabla de la bd
+		-modificar registros de la base de datos
+		-realizar alguna consulta a la bd y mostrar los datos en una tabla
+		-realizar alguna consulta con join a dos tablas y mostrar al menos dos campos de cada tabla
+		-permitir seleccionar en la tabla uno de los registros para modificarlo o borrarlo
+		-hacer consulta en la base de datos filtrando por algún campo( por ejemplo una tabla persona filtrar por el campo nombre)
+		-navegar a través de un menú entre las diferentes pantallas
+		-crear un archivo .txt si no existe todavía
+		-escribir en el archivo .txt anterior  ,cada vez que se hace un insert en la bd, los datos insertados con hora y fecha  
+		-leer el archivo .txt anterior y mostrar los datos en pantalla
+		-mostrar una o varias imágenes
+		-convertir una imagen a base64 y guardarla en alguna de las tablas de la db3 (tipo de dato del campo en db3 es clob)
+		-contar cantidad de registros según algún filtro
+		-calcular sueldo promedio
+		-obtener los datos de la persona con el sueldo mas alto
+		-obtener los datos de la persona con el sueldo mas bajo
+		-calcular la diferencia de sueldo entre la persona con el sueldo mas alto y el sueldo mas bajo
+		-calcular el sueldo anual de persona seleccionada
+		-hacer un update del sueldo de una persona aumentandolo en un %10, %15, %20 según se seleccione
+		-calcular la edad a partir de la fecha de nacimiento
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
