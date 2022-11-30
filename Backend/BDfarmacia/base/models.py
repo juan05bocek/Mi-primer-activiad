@@ -1,0 +1,13 @@
+from django.db import models
+
+# Create your models here.
+class persona(models.Model):
+    nombre = models.CharField(max_length=20)
+    apellido = models.CharField(max_length=20)
+    fecha_nacimiento = models.CharField(max_length=10)
+    telefono = models.CharField(max_length=12)
+    direccion = models.TextField()
+    dni = models.CharField(max_length=10)
+    puesto = models.CharField(max_length=20)
+    antiguedad = models.CharField(max_length=20)
+    sueldo = models.CharField(max_length=10)
