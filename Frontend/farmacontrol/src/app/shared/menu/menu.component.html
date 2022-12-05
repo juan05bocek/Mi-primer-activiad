@@ -4,20 +4,13 @@
 
  <ul class="list-group">
     <li *ngFor="let item of farmaMenu"
-        [routerLink]="[item.ruta]"     
-        class="list-group-item"
-        routerLinkActive="active">
->
-    {{ item.texto }}
+         [routerLink]="[ item.ruta ]"     
+         class="list-group-item"
+         routerLinkActive="active">
+       {{ item.texto }}
     </li>
  </ul>
 
- <ul class="list-group">
-    <li class="list-group-item"
-    routerLink="farma/page/listado-empleado"
-    > empleados
-
-    </li>
- </ul>
+ 
 
 

@@ -16,15 +16,15 @@ export class MenuComponent {
   farmaMenu: Menuitem[] = [
     {
       texto: 'Productos',
-      ruta: './farma/lista-productos',
+      ruta: './farma/productos',
     },
     {
       texto: 'Empleados',
-      ruta: './farma/listado-espleados',
+      ruta: './farma/empleados',
     },{
       texto: 'Facturas',
-      ruta: './farma/lista-facturas',
-    }
+      ruta: './farma/facturas',
+    },
   ]
 
 }

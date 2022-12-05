@@ -11,3 +11,11 @@ class persona(models.Model):
     puesto = models.CharField(max_length=20)
     antiguedad = models.CharField(max_length=20)
     sueldo = models.CharField(max_length=10)
+
+
+class producto(models.Model):
+    nombre =  models.CharField(max_length=20)
+    codigo_barra = models.CharField(max_length=20)
+    descripcion = models.CharField(max_length=100)
+    precio = models.CharField(max_length=9)
+    imagen = models.ImageField(upload_to='base/media')

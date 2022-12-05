@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from base.api.router import router_perosna
-
+from base.api2.router import router_producto
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router_perosna.urls))
+    path('api/', include(router_perosna.urls)),
+    path('api2/', include(router_producto.urls))
+
 ]

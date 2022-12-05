@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'listadoempleado',
+    path:'listado',
     loadChildren: ()=> import('./farma/farma-routing.module').then( m => m.FarmaRoutingModule),
   },
   {
     path: '**',
-    redirectTo: 'listadoempleado'
+    redirectTo: 'listado'
     
   }
 ];
