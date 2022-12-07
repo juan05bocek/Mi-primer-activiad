@@ -1,15 +1,16 @@
 <p>menu works!</p>
- <h2>Productos</h2>
+ <h2></h2>
  <hr>
 
- <ul class="list-group">
-    <li *ngFor="let item of farmaMenu"
-         [routerLink]="[ item.ruta ]"     
-         class="list-group-item"
-         routerLinkActive="active">
-       {{ item.texto }}
-    </li>
+ <ul class="list-group" >
+    <li routerLink="productos" routerLinkActive="active" class="list-group-item" > Productos </li>
+    <li routerLink="empleados" routerLinkActive="active" class="list-group-item"> Empleados </li>
+    <li routerLink="facturas" routerLinkActive="active"  class="list-group-item"> Factura </li>
  </ul>
+
+<div class="col">
+   <router-outlet></router-outlet>
+</div>
 
  
 
