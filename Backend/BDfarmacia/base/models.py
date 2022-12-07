@@ -13,9 +13,15 @@ class persona(models.Model):
     sueldo = models.CharField(max_length=10)
 
 
+
 class producto(models.Model):
     nombre =  models.CharField(max_length=20)
     codigo_barra = models.CharField(max_length=20)
     descripcion = models.CharField(max_length=100)
     precio = models.CharField(max_length=9)
     imagen = models.ImageField(upload_to='base/media')
+
+class factura(models.Model):
+    fecha = models.CharField(max_length=10)
+    empleado = models.ForeignKey(persona, on_delete=models.CASCADE)
+    productos = models.ForeignKey(producto, on_delete=models.CASCADE)

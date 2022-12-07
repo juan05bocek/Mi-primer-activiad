@@ -1,1 +1,52 @@
-<p>listado-empleado works!</p>
+<h2>Listado de Empleados</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <form autocomplete="off">
+            <Input type="text"
+                    name="termino"
+                    class="form-control"
+                    (ngModel)="termino"
+                    placeholder="Buscar">
+        </form>
+    </div>
+</div>
+
+<hr>
+<div class="alert alert-danger">
+    No se encontro el empleado JUANPERES
+</div>
+
+
+
+<div class="row">
+    <div class="col">
+        <table class="table table-hover">
+            <thead>
+               <tr>
+                <th> # </th>
+                <th> Nombre </th>
+                <th> Apellido </th>
+                <th> Fecha_Nacimiento </th>
+                <th> Telefono </th>
+                <th> Dirección </th>
+                <th> DNI </th>
+                <th> Puesto </th>
+                <th> Antiguedad </th>
+                <th> Sueldo </th>
+               </tr> 
+            </thead>
+            <tbody>
+                <tr *ngForm="let empleado of empleados">
+                    <td>{{ empleado.nombre}} </td>
+                        <td>{{ empleado.Apellido}}s</td>
+                        <td> {{ empleado.fecha_nacimiento }} </td>
+                        <td>05/05/2022</td>
+                        <td>3644364452</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

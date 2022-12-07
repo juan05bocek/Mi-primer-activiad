@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,NgModule } from '@angular/core';
+import { EmpleadosService } from '../service/empleados.service';
+import { Empleado } from '../interface/empleado.interface';
 @Component({
   selector: 'app-listado-empleado',
   templateUrl: './listado-empleado.component.html',
-  styleUrls: ['./listado-empleado.component.css']
 })
 export class ListadoEmpleadoComponent implements OnInit {
 
-  constructor() { }
+  empleado: Empleado[] =[];
+
+  termino: string = 'buscar un nombre';
+
+  constructor(private empleadoService: EmpleadosService ) { }
 
   ngOnInit(): void {
+    this.empleadoService.buscarEmpleado()
+    .subscribe(empleados => {
+      console.log(empleados)
+      this.empleado = empleados;
+    });
   }
 
 }
+  
+

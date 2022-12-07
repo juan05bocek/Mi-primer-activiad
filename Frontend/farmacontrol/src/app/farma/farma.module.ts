@@ -7,6 +7,7 @@ import { ListaProductosComponent } from './lista-productos/lista-productos.compo
 import { ListaFacturasComponent } from './lista-facturas/lista-facturas.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,10 +20,12 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     FarmaRoutingModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    NgModule
   ],
   exports:[
-    FarmaRoutingModule
+    FarmaRoutingModule,
   ]
 })
 export class FarmaModule { }

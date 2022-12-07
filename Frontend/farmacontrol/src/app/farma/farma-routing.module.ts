@@ -11,7 +11,7 @@ const routes: Routes = [
       { path: 'empleados', component: ListadoEmpleadoComponent },
       { path: 'productos', component: ListaProductosComponent  },
       { path: 'facturas', component: ListaFacturasComponent},
-      { path: '**', redirectTo: 'productos' }
+      { path: '**', redirectTo: 'empleados' }
     ]
   }
 ];
