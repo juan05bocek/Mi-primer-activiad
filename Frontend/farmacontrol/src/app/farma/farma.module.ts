@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ListadoEmpleadoComponent,
     ListaProductosComponent,
-    ListaFacturasComponent
+    ListaFacturasComponent,
   ],
   imports: [
     CommonModule,
@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
   ],
   exports:[
     FarmaRoutingModule,
+    CommonModule
   ]
 })
 export class FarmaModule { }

@@ -8,12 +8,14 @@ import {Observable} from 'rxjs';
 export class EmpleadosService {
 
   
+  
   constructor(private http: HttpClient) { }
 
   getEmpleado():(Observable<Empleado[]>){   
     return this.http.get<Empleado[]>('http://127.0.0.1:8000/api/persona/')
   }
 
+  
   
 
   

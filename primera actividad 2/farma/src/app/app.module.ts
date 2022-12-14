@@ -1,26 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http'
+import { EmpleadosRoutingModule } from './empleados/empleados-routing.module';
 import { SharedModule } from './shared/shared.module';
-import { CommonModule } from '@angular/common';
-import { NuevoEmpleadoComponent } from './nuevo-empleado/nuevo-empleado.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent,
-    NuevoEmpleadoComponent
-    
- ],
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     SharedModule,
-    CommonModule
-  
+    HttpClientModule,
+    EmpleadosRoutingModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

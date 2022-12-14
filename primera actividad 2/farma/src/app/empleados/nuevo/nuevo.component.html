@@ -1,0 +1,122 @@
+<p>Nuevo Empleado</p>
+<hr>
+
+<div class="row container">
+    <div class="col">
+        <form (ngSubmit)="guardar()" [formGroup]="miFormulario">
+
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Nombre</label>
+                    <input type="text"
+                            class="form-control"
+                            formControlName="nombre"
+                            placeholder="Ingrese el nombre">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Apellido</label>
+                    <input type="text"
+                            class="form-control"
+                            formControlName="apellido"
+                            placeholder="Ingrese el apellido">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Nacimiento</label>
+                    <input type="date"
+                            class="form-control"
+                            formControlName="nacimiento"
+                            placeholder="Ingrese fecha de nacimiento">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Telefono</label>
+                    <input type="number"
+                            class="form-control"
+                            formControlName="telefono"
+                            placeholder="Ingrese numero de telefono">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Direccion</label>
+                    <input type="text"
+                            class="form-control"
+                            formControlName="direccion"
+                            placeholder="Ingrese el domicilio">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Dni</label>
+                    <input type="number"
+                            class="form-control"
+                            formControlName="dni"
+                            placeholder="Ingrese el DNI">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Puesto</label>
+                    <input type="text"
+                            class="form-control"
+                            formControlName="puesto"
+                            placeholder="Ingrese el pusto">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Antiguedad</label>
+                    <input type="number"
+                            class="form-control"
+                            formControlName="antiguedad"
+                            placeholder="Ingrese la antiguedad">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label class="col-form-label">Sueldo</label>
+                    <input type="text"
+                            class="form-control"
+                            formControlName="sueldo"
+                            placeholder="Ingrese el nombre">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit"
+                    class="btn btn-success float-end">
+                        Gaurdar
+                    </button>
+                </div>
+            </div>
+     
+        </form>
+    </div>
+</div>
+
+
+<div class="row container" >
+    <div class="col">
+
+        <span>VAlid</span>
+        <pre>{{miFormulario.valid}}</pre>
+
+        <span>tOUCHED</span>
+        <pre>{{miFormulario.touched}}</pre>
+
+        <span>Value</span>
+        <pre>{{miFormulario.value | json}}</pre>
+
+    </div>
+</div>
