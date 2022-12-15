@@ -16,10 +16,19 @@ export class EmpleadoServiceService {
     return this.http.get<Empleado[]>('http://127.0.0.1:8000/api/persona/')
   }
 
-  newEmpleado(nombre: string , apellido:string, nacimiento: string, telefono:number, direccion:string, dni:number, puesto:string, antiguedad:number, sueldo: number|string ){
-    
-    const url = 'http://127.0.0.1:8000/api/persona/';
-    const body = {nombre,apellido,nacimiento, telefono, direccion, dni, puesto, antiguedad, sueldo};
-    return this.http.post<Empleado>(url, body);
+  get1Empleado(id: number):Observable<Empleado>{
+    return this.http.get<Empleado>('http://127.0.0.1:8000/api/persona/'+ id);
+  }
+
+  newEmpleado(empleado: Empleado): Observable<Empleado>{    
+    return this.http.post<Empleado>('http://127.0.0.1:8000/api/persona/', empleado);
+  }
+
+  updateEmpleado(empleado: Empleado):Observable<Empleado>{
+    return this.http.put<Empleado>('http://127.0.0.1:8000/api/persona/', empleado);
+  }
+
+  borrarEmpleado(id:number):Observable<any>{
+    return this.http.delete<any>(`http://127.0.0.1:8000/api/persona/${id}`);
   }
 }

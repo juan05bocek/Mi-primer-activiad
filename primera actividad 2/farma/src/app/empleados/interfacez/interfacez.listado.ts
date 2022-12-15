@@ -1,12 +1,13 @@
 export interface Empleado {
-    id?:               number;
+    id?:              number;
     nombre:           string;
     apellido:         string;
     fecha_nacimiento: string;
-    telefono:         string;
+    telefono:         number;
     direccion:        string;
     dni:              string;
+    fecha_ingreso:    string;
     puesto:           string;
     antiguedad:       string;
-    sueldo:           string;
+    sueldo:           number;
 }

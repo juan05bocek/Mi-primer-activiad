@@ -6,6 +6,7 @@ import { ListadoComponent } from './listado/listado.component';
 import { AgregarEmpleadosComponent } from './agregar-empleados/agregar-empleados.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuevoComponent } from './nuevo/nuevo.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { NuevoComponent } from './nuevo/nuevo.component';
     CommonModule,
     EmpleadosRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ]
 })
 export class EmpleadosModule { }

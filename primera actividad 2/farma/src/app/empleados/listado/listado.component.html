@@ -30,6 +30,7 @@
                 <th> Telefono </th>
                 <th> Direccion </th>
                 <th> DNI </th>
+                <th> fecha_ingreso </th>
                 <th> Puesto </th>
                 <th> Antiguedad </th>
                 <th> Sueldo </th>
@@ -42,9 +43,22 @@
                         <td> {{item.telefono}} </td>
                         <td> {{item.direccion}} </td>
                         <td> {{item.dni}} <td>
+                        <td> {{item.fecha_ingreso}} <td>
                         <td> {{item.puesto}} </td>
                         <td> {{item.antiguedad}} </td>
                         <td> {{item.sueldo}} </td>
+                        <td class="text-rught" >
+                            <div >
+                                <button class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+                            </div>
+                            
+                        </td>
+                        <td class="text-rught" >
+                            <div >
+                                <button class="btn btn-warning" [routerLink]="['/empleados/nuevo' , item.id ]" >Modificar</button>
+                            </div>
+                            
+                        </td>
                 </tr>
         </table>
     </div>

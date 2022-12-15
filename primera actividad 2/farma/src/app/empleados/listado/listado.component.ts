@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Routes } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { Empleado } from '../interfacez/interfacez.listado';
 import { EmpleadoServiceService } from '../service/empleado-service.service';
 
@@ -11,8 +11,10 @@ export class ListadoComponent implements OnInit {
 
   empleados: Empleado[] = [];
 
+  
   constructor(private empleadoService: EmpleadoServiceService,
-              private router: Router)
+              private router: Router,
+              private activateRouter: ActivatedRoute)
               { }
 
     ngOnInit(): void {
@@ -25,4 +27,8 @@ export class ListadoComponent implements OnInit {
     this.router.navigate(['/empleados/nuevo']);
    }
 
+   eliminar(){
+    
+    
+   }
 }
