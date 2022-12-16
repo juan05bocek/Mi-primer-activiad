@@ -17,7 +17,7 @@ export class EmpleadoServiceService {
   }
 
   get1Empleado(id: number):Observable<Empleado>{
-    return this.http.get<Empleado>('http://127.0.0.1:8000/api/persona/'+ id);
+    return this.http.get<Empleado>(`http://127.0.0.1:8000/api/persona/${id}`);
   }
 
   newEmpleado(empleado: Empleado): Observable<Empleado>{    

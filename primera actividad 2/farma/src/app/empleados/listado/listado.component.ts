@@ -27,8 +27,10 @@ export class ListadoComponent implements OnInit {
     this.router.navigate(['/empleados/nuevo']);
    }
 
-   eliminar(){
-    
-    
+   eliminar(id:any){
+    this.empleadoService.borrarEmpleado(id)
+     .subscribe(resp=>{
+      
+     })
    }
 }

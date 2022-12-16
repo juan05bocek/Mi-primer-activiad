@@ -49,13 +49,13 @@
                         <td> {{item.sueldo}} </td>
                         <td class="text-rught" >
                             <div >
-                                <button class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+                                <button class="btn btn-danger" (click)="eliminar(item.id)">Eliminar</button>
                             </div>
                             
                         </td>
                         <td class="text-rught" >
                             <div >
-                                <button class="btn btn-warning" [routerLink]="['/empleados/nuevo' , item.id ]" >Modificar</button>
+                                <button class="btn btn-warning" routerLink="/empleados/nuevo/" >Modificar</button>
                             </div>
                             
                         </td>

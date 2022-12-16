@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { Empleado } from '../interfacez/interfacez.listado';
 import { EmpleadoServiceService } from '../service/empleado-service.service';
 import { switchMap } from 'rxjs';
-import { ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 
 @Component({
@@ -14,6 +14,7 @@ import { ActivatedRoute, Router} from '@angular/router';
 export class NuevoComponent implements OnInit {
 
   nuevoempleado: Empleado = {
+    id: 0,
     nombre : '',
     apellido : '',
     fecha_nacimiento : '',
@@ -27,12 +28,17 @@ export class NuevoComponent implements OnInit {
   }
   constructor(private fb: FormBuilder,
               private empleadoService: EmpleadoServiceService,
-              private activarouter: ActivatedRoute) { }
+              private activarouter: ActivatedRoute,
+              private router: Router) { }
 
   
   
   ngOnInit(): void {
-    this.editar();
+    this.activarouter.params
+    .pipe(
+      switchMap( ({id}) => this.empleadoService.get1Empleado(id))
+    )
+    .subscribe( empleado => this.nuevoempleado = empleado);
   }
   
 
@@ -42,23 +48,13 @@ export class NuevoComponent implements OnInit {
       this.empleadoService.newEmpleado(this.nuevoempleado)
       .subscribe(resp =>{
         console.log('Respuesta', resp);
+
+        this.router.navigate(['/empleados/listado']);
       })
     };
 
-    editar():void{
-      this.activarouter.params
-        .subscribe(
-          resp =>{
-            let id=resp['id'];
-            if(id){
-              this.empleadoService.get1Empleado(id).subscribe(
-                resp=> this.nuevoempleado=resp
-              )
-            }
-          }
-        )
-    }
-   
+    
+
     
   }
   
