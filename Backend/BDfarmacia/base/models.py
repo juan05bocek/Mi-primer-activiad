@@ -9,6 +9,7 @@ class persona(models.Model):
     direccion = models.TextField()
     dni = models.CharField(max_length=10)
     puesto = models.CharField(max_length=20)
+    fecha_ingreso = models.CharField(max_length=10)
     antiguedad = models.CharField(max_length=20)
     sueldo = models.CharField(max_length=10)
 
