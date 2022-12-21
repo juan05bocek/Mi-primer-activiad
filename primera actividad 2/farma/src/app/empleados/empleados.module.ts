@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EmpleadosRoutingModule } from './empleados-routing.module';
 import { ListadoComponent } from './listado/listado.component';
 import { AgregarEmpleadosComponent } from './agregar-empleados/agregar-empleados.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuevoComponent } from './nuevo/nuevo.component';
-import { RouterModule } from '@angular/router';
 
+/* Angular Materia*/
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { RouterModule } from '@angular/router';
     EmpleadosRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class EmpleadosModule { }

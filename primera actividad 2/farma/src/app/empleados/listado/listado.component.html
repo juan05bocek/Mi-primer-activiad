@@ -1,27 +1,29 @@
 <h2>Listado de Empleados</h2>
-<hr>
 
-<div class="row">
-    <div class="col">
-        <form autocomplete="off">
-            <Input type="text"
-                    name="termino"
-                    class="form-control"
-                    placeholder="Buscar">
-        </form>
+
+<div class="conteiner">
+    
+
+    <div class="input-group" >
+            <form (ngSubmit)="buscar()" autocomplete="off">
+                <span class="input-group-text">Buscar Empleado</span>
+                <input type="text" aria-label="First name" 
+                        class="form-control"
+                        name="termino"
+                        [(ngModel)]="termino">
+            </form>
+      </div>
+   
+   
+    <div class="row">
+        <div class="col"> <button class="btn btn-success" (click)="nuevo()" > Nuevo empleado</button></div>
+        <div class="col">    <button class="btn btn-primary d-grid gap-2 d-md-flex justify-content-md-en me-md-2">.txt</button></div>
     </div>
-</div>
-
-<hr>
-<div class="alert alert-danger">
-    No se encontro el empleado JUANPERES
-</div>
 
 
-
-<div class="panel-body">
-    <div class="col">
-        <table class="table table-over">
+    <div class="panel-body">
+        <div class="col">
+            <table class="table table-over">
                <tr>
                 <th>Id</th>
                 <th> Nombre </th>
@@ -35,7 +37,7 @@
                 <th> Antiguedad </th>
                 <th> Sueldo </th>
                </tr> 
-                <tr *ngFor="let item of empleados">
+                <tr *ngFor="let item of empleados" >
                     <td> {{item.id}} </td>
                     <td> {{item.nombre}} </td>
                         <td> {{item.apellido}} </td>
@@ -60,8 +62,7 @@
                             
                         </td>
                 </tr>
-        </table>
+            </table>
+        </div>
     </div>
 </div>
-<button class="btn btn-success" (click)="nuevo()" > Nuevo empleado</button>
-

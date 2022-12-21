@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { Empleado } from '../interfacez/interfacez.listado';
 import { EmpleadoServiceService } from '../service/empleado-service.service';
@@ -9,9 +9,16 @@ import { EmpleadoServiceService } from '../service/empleado-service.service';
 })
 export class ListadoComponent implements OnInit {
 
+  termino: string = '';
   empleados: Empleado[] = [];
 
-  
+  buscar(){
+    this.empleadoService.buscarEmpleado(this.termino)
+      .subscribe(resp => {
+        console.log(resp);
+      });
+  }
+
   constructor(private empleadoService: EmpleadoServiceService,
               private router: Router,
               private activateRouter: ActivatedRoute)
@@ -20,8 +27,9 @@ export class ListadoComponent implements OnInit {
     ngOnInit(): void {
     this.empleadoService.getEmpleado()
     .subscribe( empleados => this.empleados = empleados);
-    }
 
+    }
+      
   
    nuevo(){
     this.router.navigate(['/empleados/nuevo']);
@@ -30,7 +38,8 @@ export class ListadoComponent implements OnInit {
    eliminar(id:any){
     this.empleadoService.borrarEmpleado(id)
      .subscribe(resp=>{
-      
+      window.location.reload();
+
      })
    }
 }

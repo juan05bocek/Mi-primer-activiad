@@ -31,4 +31,9 @@ export class EmpleadoServiceService {
   borrarEmpleado(id:number):Observable<any>{
     return this.http.delete<any>(`http://127.0.0.1:8000/api/persona/${id}`);
   }
+
+  buscarEmpleado(termino:string){
+    const url = `http://127.0.0.1:8000/api/persona/?nombre=${termino}`;
+    return this.http.get(url);
+  }
 }
