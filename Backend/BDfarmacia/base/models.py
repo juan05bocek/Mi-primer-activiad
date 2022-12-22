@@ -16,7 +16,7 @@ class persona(models.Model):
 
 
 class producto(models.Model):
-    nombre =  models.CharField(max_length=20)
+    nombre =  models.CharField(max_length=100)
     codigo_barra = models.CharField(max_length=20)
     descripcion = models.CharField(max_length=100)
     precio = models.CharField(max_length=9)

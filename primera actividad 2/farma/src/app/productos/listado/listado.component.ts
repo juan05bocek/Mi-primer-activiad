@@ -8,7 +8,7 @@ import { ProductoSErviceService } from '../service/producto-service.service';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
-  producto: Producto[] = [];
+  producto:Producto[] = [];
 
   
   constructor(private productoService:ProductoSErviceService) { }
@@ -17,7 +17,7 @@ export class ListadoComponent implements OnInit {
 
     
     this.productoService.getProductos()
-    .subscribe( productos => this.producto = productos );
+    .subscribe( productos => this.producto = productos) ;
   }
 
 }
