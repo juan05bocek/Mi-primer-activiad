@@ -7,7 +7,6 @@ import { EmpleadosRoutingModule } from './empleados-routing.module';
 import { ListadoComponent } from './listado/listado.component';
 import { AgregarEmpleadosComponent } from './agregar-empleados/agregar-empleados.component';
 import { NuevoComponent } from './nuevo/nuevo.component';
-
 /* Angular Materia*/
 
 @NgModule({

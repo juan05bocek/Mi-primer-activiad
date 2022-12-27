@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: ()=> import('./productos/productos.module').then( m => m.ProductosModule),
   },
   {
+    path:'facturas',
+    loadChildren: ()=> import('./facturas/facturas.module').then( m => m.FacturasModule),
+  },
+  {
     path: '**',
     redirectTo: 'productos'
     
