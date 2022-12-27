@@ -19,3 +19,4 @@ class ProductoAdmin(admin.ModelAdmin):
 @admin.register(factura)
 class FacturaAdmin(admin.ModelAdmin):
     list_display = ['fecha','empleado','productos']
+

@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from base.api.router import router_perosna
 from base.api2.router import router_producto
+from base.api3.router import router_facturas
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_perosna.urls)),
-    path('api2/', include(router_producto.urls))
+    path('api2/', include(router_producto.urls)),
+    path('api3facturas/', include(router_facturas.urls))
+    
 
 ]

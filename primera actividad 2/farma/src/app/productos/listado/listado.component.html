@@ -1,18 +1,14 @@
-<header>
-  
-  <div class="navbar navbar-expander-lg navbar-dark bg-dark">
-    <div class="container">
-      <a href="#" class="navbar-brand">
-        <strong>Productos Disponibles</strong>
-      </a>
-      <button>
-        <a href="../nuevo-producto" routerLink="/productos/nuevo" class="btn btn-primary">Subir productos</a>
-      </button>
-    </div>
-  </div>
-</header>
-
 <div class="container">
+
+      <a href="#" class="navbar-brand">
+        <strong>Productos Disponibles en perfumeria</strong>
+      </a>
+      <div class="btn-group">
+        <a class="btn btn-primary active" routerLink="../nuevo" aria-current="page">Nuevo Productos</a>
+        <a class="btn btn-info">Actualización 20/12/2022</a>
+      </div>
+   
+
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <div class="col"  *ngFor="let item of producto">
       <div class="card shadow-sm">
