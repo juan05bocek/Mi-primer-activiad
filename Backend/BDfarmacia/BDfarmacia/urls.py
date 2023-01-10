@@ -18,11 +18,13 @@ from django.urls import path, include
 from base.api.router import router_perosna
 from base.api2.router import router_producto
 from base.api3.router import router_facturas
+from base.views import Empleados
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_perosna.urls)),
     path('api2/', include(router_producto.urls)),
-    path('api3facturas/', include(router_facturas.urls))
+    path('api3facturas/', include(router_facturas.urls)),
+    path('empleados/' , Empleados ),
     
 
 ]
